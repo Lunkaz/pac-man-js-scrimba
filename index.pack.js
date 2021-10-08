@@ -56,15 +56,33 @@ let pacmanCurrentIndex = 500;
 
 squares[pacmanCurrentIndex].classList.add("pacman")
 
-function control(e) {
-    if (e.keyCode === 40) {
-        console.log('pressed down')
-    } else if ( e.keyCode === 38) {
-        console.log('pressed up')
-    } else if (e.keyCode === 37) {
-        console.log('pressed left')
-    } else if (e.keyCode === 39) {
-        console.log('pressed right')
+function control(event) {
+    
+
+    switch(event.key) {
+
+        case "Down":
+        case "ArrowDown":
+            console.log('pressed down')
+            break;
+
+        case "Up":
+        case "ArrowUp":
+            console.log("pressed up")
+            break;
+
+        case "Left":
+        case "ArrowLeft":
+            console.log("pressed left")
+            break;
+
+        case "Right":
+        case "ArrowRight":
+            console.log("pressed right")
+            break;
+        
+        default:
+            return;
     }
     
 }
